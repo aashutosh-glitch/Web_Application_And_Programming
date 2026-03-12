@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Portfolio.</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#calendar">Calendar</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="greeting">Hello, I'm</p>
+      <h1 class="hero-name">Aashutosh</h1>
+      <h2 class="hero-role">Full Stack Developer</h2>
+      <p class="hero-desc">I build clean, fast, and beautiful web applications. Currently studying BCT at KEC.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="avatar-ring">
+        <div class="avatar">AC</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a passionate developer in my Third year of BCT. I love turning ideas into reality using code. When I'm not coding, I enjoy reading and exploring new technologies.</p>
+        <div class="skills-list">
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Python</span>
+       
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card"><span class="stat-num">6+</span><span class="stat-label">Labs Done</span></div>
+        <div class="stat-card"><span class="stat-num">3nd</span><span class="stat-label">Year BCT</span></div>
+        <div class="stat-card"><span class="stat-num">10+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-card"><span class="stat-num">∞</span><span class="stat-label">Coffee Cups</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">📁</div>
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio built with HTML, CSS and JavaScript featuring a live calendar.</p>
+        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+        <a href="#" class="project-link">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">✅</div>
+        <h3>Todo App</h3>
+        <p>A full CRUD todo application built with React. Supports add, edit, delete and complete.</p>
+        <div class="project-tags"><span>React</span><span>State</span></div>
+        <a href="#" class="project-link">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🔐</div>
+        <h3>Auth System</h3>
+        <p>Login & Register system with FastAPI backend, JWT tokens, and PostgreSQL database.</p>
+        <div class="project-tags"><span>FastAPI</span><span>JWT</span><span>PostgreSQL</span></div>
+        <a href="#" class="project-link">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDAR SECTION -->
+  <section id="calendar" class="calendar-section">
+    <h2 class="section-title">My <span>Calendar</span></h2>
+    <p class="calendar-subtitle">Track important dates and deadlines</p>
+    <div class="calendar-wrapper">
+      <div class="calendar-header">
+        <button id="prevBtn" class="cal-nav">&#8249;</button>
+        <h3 id="monthYear">Month Year</h3>
+        <button id="nextBtn" class="cal-nav">&#8250;</button>
+      </div>
+      <div class="calendar-grid">
+        <div class="day-header">Sun</div>
+        <div class="day-header">Mon</div>
+        <div class="day-header">Tue</div>
+        <div class="day-header">Wed</div>
+        <div class="day-header">Thu</div>
+        <div class="day-header">Fri</div>
+        <div class="day-header">Sat</div>
+      </div>
+      <div class="calendar-days" id="calendarDays"></div>
+      <div class="calendar-legend">
+        <span class="legend-today">■ Today</span>
+        <span class="legend-event">■ Has Event</span>
+      </div>
+    </div>
+
+    <!-- Event Form -->
+    <div class="event-form">
+      <h3>Add an Event</h3>
+      <input type="date" id="eventDate" />
+      <input type="text" id="eventName" placeholder="Event title..." />
+      <button onclick="addEvent()">Add Event</button>
+    </div>
+
+    <!-- Event List -->
+    <div class="event-list" id="eventList">
+      <h3>Upcoming Events</h3>
+      <ul id="eventItems"></ul>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">📧 <span>kan080bct005@email.com</span></div>
+        <div class="contact-item">📱 <span>+977-9749314970</span></div>
+        <div class="contact-item">📍 <span>Kathmandu, Nepal</span></div>
+        
+      </div>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message..." rows="4" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Built with ❤️ by <strong>ASHUTOSH</strong> — BCT A, kANTIPUR ENGINEERIG COLLEGE</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
