@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Hotel Management System</h1>
+  <p>Manage rooms, bookings, and payments with role-based access.</p>
+</section>
+
+<section class="card">
+  <h2>Quick Links</h2>
+  <div class="grid">
+    <a class="tile" href="/auth/">User Authentication</a>
+    <a class="tile" href="/rooms/">Room Management</a>
+    <a class="tile" href="/bookings/">Bookings</a>
+    <a class="tile" href="/payments/">Payments</a>
+    <a class="tile" href="/reception/">Reception Portal</a>
+    <a class="tile" href="/dashboard/">Admin Dashboard</a>
+  </div>
+</section>
+
+<section class="card output">
+  <h2>Output</h2>
+  <pre id="output">Select a page and use the actions to see results here.</pre>
+</section>
+{% endblock %}

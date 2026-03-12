@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>Reception Portal</h1>
+  <p>View availability, allocate rooms, and deallocate bookings.</p>
+</section>
+
+<section class="card">
+  <h2>Summary</h2>
+  <button onclick="receptionSummary()">Get Summary</button>
+</section>
+
+<section class="card">
+  <h2>Check Availability</h2>
+  <div class="grid">
+    <div>
+      <input id="avail-room-type" placeholder="room type (optional)" />
+      <input id="avail-checkin" placeholder="check in (YYYY-MM-DD)" />
+      <input id="avail-checkout" placeholder="check out (YYYY-MM-DD)" />
+      <button onclick="checkAvailability()">Check</button>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Allocate Room</h2>
+  <div class="grid">
+    <div>
+      <input id="alloc-username" placeholder="customer username" />
+      <input id="alloc-room-id" placeholder="room id" />
+      <input id="alloc-checkin" placeholder="check in (YYYY-MM-DD)" />
+      <input id="alloc-checkout" placeholder="check out (YYYY-MM-DD)" />
+      <button onclick="allocateRoom()">Allocate</button>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Deallocate Room</h2>
+  <div class="grid">
+    <div>
+      <input id="dealloc-booking-id" placeholder="booking id" />
+      <button onclick="deallocateRoom()">Deallocate</button>
+    </div>
+  </div>
+</section>
+
+<section class="card output">
+  <h2>Output</h2>
+  <pre id="output">Ready.</pre>
+</section>
+{% endblock %}

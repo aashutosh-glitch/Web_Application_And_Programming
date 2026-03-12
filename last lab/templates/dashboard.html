@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Admin Dashboard</h2>
+  <p>Only admins can access this data.</p>
+  <button onclick="dashboard()">Fetch Dashboard</button>
+</section>
+
+<section class="card output">
+  <h2>Output</h2>
+  <pre id="output">Ready.</pre>
+</section>
+{% endblock %}

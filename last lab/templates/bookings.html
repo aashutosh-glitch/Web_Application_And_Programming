@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Bookings</h2>
+  <div class="grid">
+    <div>
+      <h3>Create Booking</h3>
+      <input id="booking-room" placeholder="room id" />
+      <input id="booking-checkin" placeholder="check in (YYYY-MM-DD)" />
+      <input id="booking-checkout" placeholder="check out (YYYY-MM-DD)" />
+      <button onclick="createBooking()">Book Room</button>
+    </div>
+    <div>
+      <h3>List Bookings</h3>
+      <button onclick="listBookings()">Fetch Bookings</button>
+    </div>
+  </div>
+</section>
+
+<section class="card output">
+  <h2>Output</h2>
+  <pre id="output">Ready.</pre>
+</section>
+{% endblock %}

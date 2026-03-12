@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Room Management</h2>
+  <div class="grid">
+    <div>
+      <h3>Create Room</h3>
+      <input id="room-number" placeholder="room number" />
+      <input id="room-type" placeholder="room type" />
+      <input id="room-price" placeholder="price" />
+      <select id="room-status">
+        <option value="available">available</option>
+        <option value="booked">booked</option>
+        <option value="maintenance">maintenance</option>
+      </select>
+      <button onclick="createRoom()">Create Room</button>
+    </div>
+    <div>
+      <h3>List Rooms</h3>
+      <button onclick="listRooms()">Fetch Rooms</button>
+    </div>
+  </div>
+</section>
+
+<section class="card output">
+  <h2>Output</h2>
+  <pre id="output">Ready.</pre>
+</section>
+{% endblock %}

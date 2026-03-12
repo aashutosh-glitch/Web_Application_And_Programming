@@ -1,0 +1,132 @@
+:root {
+  --bg: #f7f4ef;
+  --ink: #1c1c1c;
+  --accent: #3a6b35;
+  --card: #ffffff;
+  --border: #ddd6cc;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(160deg, #f7f4ef 0%, #efe7dd 60%, #f4efe8 100%);
+  color: var(--ink);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--ink);
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.nav a:hover {
+  border-color: var(--border);
+  background: #f7f2ea;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 0 0 6px;
+}
+
+.hero p {
+  margin: 0 0 24px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 30px rgba(28, 28, 28, 0.08);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tile {
+  display: block;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f6efe6;
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+input,
+select,
+button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #cfc6ba;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.output pre {
+  background: #0f0e0d;
+  color: #f7f4ef;
+  padding: 12px;
+  border-radius: 8px;
+  min-height: 120px;
+  overflow-x: auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: #5a554e;
+}

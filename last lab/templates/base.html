@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hotel Management System</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">HMS</div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/auth/">Auth</a>
+        <a href="/rooms/">Rooms</a>
+        <a href="/bookings/">Bookings</a>
+        <a href="/payments/">Payments</a>
+        <a href="/reception/">Reception</a>
+        <a href="/dashboard/">Dashboard</a>
+      </nav>
+    </header>
+
+    <main class="page">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">Hotel Management System Demo</footer>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

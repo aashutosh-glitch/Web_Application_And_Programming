@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Payments</h2>
+  <div class="grid">
+    <div>
+      <h3>Record Payment</h3>
+      <input id="payment-booking" placeholder="booking id" />
+      <input id="payment-amount" placeholder="amount" />
+      <select id="payment-method">
+        <option value="cash">cash</option>
+        <option value="card">card</option>
+        <option value="upi">upi</option>
+      </select>
+      <select id="payment-status">
+        <option value="paid">paid</option>
+        <option value="pending">pending</option>
+        <option value="failed">failed</option>
+      </select>
+      <button onclick="recordPayment()">Save Payment</button>
+    </div>
+  </div>
+</section>
+
+<section class="card output">
+  <h2>Output</h2>
+  <pre id="output">Ready.</pre>
+</section>
+{% endblock %}
